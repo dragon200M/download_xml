@@ -114,7 +114,7 @@ namespace DatabaseUtils
                 }
                 catch (SqlException s)
                 {
-                    Console.WriteLine("Bład query sql -> XmlCiecie lub XMLSeria");
+                    Console.WriteLine("Bład query sql -> XmlCiecie lub XMLSeria "+s);
                 }
 
 

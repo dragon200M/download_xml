@@ -1,6 +1,6 @@
 konfiguracja:
 - link:    &p1 "bazaTestowa"
-- link:    &p2 "Server=DESKTOP-OFR643O;Trusted_Connection=yes;Database=Development"
+- link:    &p2 "Server=;Trusted_Connection=yes;Database=Development"
 - link:    &p3 "prod"
 
 xmltype:
