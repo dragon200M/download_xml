@@ -1,0 +1,15 @@
+konfiguracja:
+- link:    &p1 "bazaTestowa"
+- link:    &p2 "Server=DESKTOP-OFR643O;Trusted_Connection=yes;Database=Development"
+- link:    &p3 "prod"
+
+xmltype:
+- item:  &x "XmlCiecie"
+- item:  &x2 "XMLSeria"
+
+parametry:
+  polaczenie: *p2
+  seria: 1
+  rodzajxml: *x
+  folderwynikowy: "C:/test"
+  plikwynikowy: "test.xml"
