@@ -77,6 +77,7 @@ namespace DatabaseUtils
                 string connectionString = _parametry.Polaczenie;
                 string sqlStatemant = chooseSqlStatement();
                 string column = chooseSqlColumn();
+               
 
                 try
                 {
@@ -88,13 +89,20 @@ namespace DatabaseUtils
 
                     var reader = cmd.ExecuteReader();
                     reader.Read();
-
-                    var xmlBuffer = reader[column];
-
-                    using (StreamWriter writer =
-                        new StreamWriter("C:\\Users\\maciej\\Desktop\\" + _parametry.Plikwynikowy))
+                    if (reader.HasRows)
                     {
-                        writer.WriteLine(xmlBuffer);
+                        var xmlBuffer = reader[column];
+
+                        using (StreamWriter writer =
+                            new StreamWriter(_parametry.Folderwynikowy+"\\"+ _parametry.Plikwynikowy))
+                        {
+                            writer.WriteLine(xmlBuffer);
+                        }
+                    }
+                    else
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Brak wynikow, sprawdz poprawnosc numeru.");
                     }
 
                     sqlConnection.Close();

@@ -11,5 +11,5 @@ parametry:
   polaczenie: *p2
   seria: 1
   rodzajxml: *x
-  folderwynikowy: "C:/test"
+  folderwynikowy: "C:\Users\maciej\Desktop\xmle"
   plikwynikowy: "test.xml"

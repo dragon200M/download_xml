@@ -25,12 +25,13 @@ namespace DatabaseUtils
         var cc =  co.GetParametry();
         Console.WriteLine(cc.ToString());
             
-         Connection con = new Connection(cc);
+            Connection con = new Connection(cc);
             var w = con.chooseSqlStatement();
             var e = con.chooseSqlColumn();
             
             Console.WriteLine(w+" | "+e);
             con.getXmlFromDB();
+            
             
 
         }
